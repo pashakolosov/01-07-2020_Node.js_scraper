@@ -2,17 +2,23 @@
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">Продажа яблок</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-                <a href="/">Главная страница</a>
-            </li>
+            {{#if isIndex}}
+                <li class="active"><a href="/">Главная страница</a></li>
+            {{else}}
+                <li><a href="/">Главная страница</a></li>
+            {{/if}}
 
-            <li>
-                <a href="/courses">Курсы</a>
-            </li>
+            {{#if isApple}}
+                <li class="active"><a href="/apple">Яблоки</a></li>
+            {{else}}
+                <li><a href="/apple">Яблоки</a></li>
+            {{/if}}
 
-            <li>
-                <a href="/add">Добавить курс</a>
-            </li>
+            {{#if isAdd}}
+                <li class="active"><a href="/add">Добавить в корзину</a></li>
+            {{else}}
+                <li><a href="/add">Добавить в корзину</a></li>
+            {{/if}}
         </ul>
     </div>
 </nav>
